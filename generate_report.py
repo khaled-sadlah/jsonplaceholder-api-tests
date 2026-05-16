@@ -1,3 +1,5 @@
+# script to parse pytest xml output and generate html report
+
 import xml.etree.ElementTree as ET
 import os
 from datetime import datetime
