@@ -46,8 +46,14 @@ pytest tests/test_posts.py
 pytest tests/test_posts.py::TestGetPosts
 ```
 
-## Run with HTML Report
+## Run Tests and Generate Report
 
 ```bash
-pytest --html=reports/report.html
+# Step 1 - run all tests (report.xml will be created automatically)
+pytest
+
+# Step 2 - convert XML to HTML
+python generate_report.py
 ```
+
+The HTML report will be saved to `reports/report.html`
