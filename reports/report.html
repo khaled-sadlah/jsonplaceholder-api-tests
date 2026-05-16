@@ -1,0 +1,2557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Report - JSONPlaceholder API</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #f4f6f8;
+      color: #333;
+      padding: 32px;
+    }
+    .container { max-width: 1100px; margin: 0 auto; }
+    .header {
+      background: #2c3e50;
+      color: white;
+      padding: 28px 32px;
+      border-radius: 10px;
+      margin-bottom: 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header h1 { font-size: 22px; font-weight: 700; }
+    .header .meta { font-size: 13px; opacity: 0.7; margin-top: 4px; }
+    .overall {
+      font-size: 14px;
+      font-weight: 700;
+      color: #e74c3c;
+      background: white;
+      padding: 6px 16px;
+      border-radius: 20px;
+    }
+    .section {
+      background: #fff;
+      border-radius: 10px;
+      padding: 28px 32px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+      margin-bottom: 24px;
+    }
+    .section-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: #2c3e50;
+      margin-bottom: 20px;
+    }
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      color: #aaa;
+      margin-top: 32px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="header">
+      <div>
+        <h1>JSONPlaceholder API — Test Report</h1>
+        <div class="meta">Generated: 2026-05-17 01:52:55 &nbsp;|&nbsp; Source: report.xml</div>
+      </div>
+      <div class="overall">13 FAILED</div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Summary</div>
+      <div style="display:flex;flex-wrap:wrap;gap:16px;margin-bottom:32px;">
+        <div style="background:#fff;border-radius:8px;padding:20px 28px;
+                    box-shadow:0 1px 4px rgba(0,0,0,0.1);min-width:120px;
+                    border-top:4px solid #4a90d9;">
+          <div style="font-size:28px;font-weight:700;color:#4a90d9;">167</div>
+          <div style="font-size:13px;color:#666;margin-top:4px;">Total Tests</div>
+        </div>
+        <div style="background:#fff;border-radius:8px;padding:20px 28px;
+                    box-shadow:0 1px 4px rgba(0,0,0,0.1);min-width:120px;
+                    border-top:4px solid #27ae60;">
+          <div style="font-size:28px;font-weight:700;color:#27ae60;">154</div>
+          <div style="font-size:13px;color:#666;margin-top:4px;">Passed</div>
+        </div>
+        <div style="background:#fff;border-radius:8px;padding:20px 28px;
+                    box-shadow:0 1px 4px rgba(0,0,0,0.1);min-width:120px;
+                    border-top:4px solid #e74c3c;">
+          <div style="font-size:28px;font-weight:700;color:#e74c3c;">13</div>
+          <div style="font-size:13px;color:#666;margin-top:4px;">Failed</div>
+        </div>
+        <div style="background:#fff;border-radius:8px;padding:20px 28px;
+                    box-shadow:0 1px 4px rgba(0,0,0,0.1);min-width:120px;
+                    border-top:4px solid #f39c12;">
+          <div style="font-size:28px;font-weight:700;color:#f39c12;">0</div>
+          <div style="font-size:13px;color:#666;margin-top:4px;">Skipped</div>
+        </div>
+        <div style="background:#fff;border-radius:8px;padding:20px 28px;
+                    box-shadow:0 1px 4px rgba(0,0,0,0.1);min-width:120px;
+                    border-top:4px solid #8e44ad;">
+          <div style="font-size:28px;font-weight:700;color:#8e44ad;">92.2%</div>
+          <div style="font-size:13px;color:#666;margin-top:4px;">Pass Rate</div>
+        </div>
+        <div style="background:#fff;border-radius:8px;padding:20px 28px;
+                    box-shadow:0 1px 4px rgba(0,0,0,0.1);min-width:120px;
+                    border-top:4px solid #2c3e50;">
+          <div style="font-size:28px;font-weight:700;color:#2c3e50;">46.39s</div>
+          <div style="font-size:13px;color:#666;margin-top:4px;">Duration</div>
+        </div></div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Test Results</div>
+      
+    <div style="margin-bottom:40px;">
+      <h2 style="font-size:18px;color:#2c3e50;margin-bottom:16px;
+                 padding-bottom:8px;border-bottom:2px solid #eee;">
+        pytest
+      </h2>
+      <div style="margin-bottom:24px;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
+          <span style="font-size:15px;font-weight:600;color:#34495e;">TestGetAlbums</span>
+          <span style="font-size:12px;color:#27ae60;font-weight:500;">
+            12/12 passed
+          </span>
+        </div>
+        <table style="width:100%;border-collapse:collapse;font-size:13px;">
+          <thead>
+            <tr style="background:#f8f9fa;">
+              <th style="text-align:left;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;">Test Name</th>
+              <th style="text-align:center;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;width:90px;">Status</th>
+              <th style="text-align:right;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;width:80px;">Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_all_albums_status_200
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.199s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_all_albums_returns_list
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.194s
+              </td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_all_albums_returns_100
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.187s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_all_albums_fields_exist
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.188s
+              </td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_album_by_id_status_200
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.178s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_album_by_id_correct_id
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.192s
+              </td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_album_by_id_title_is_string
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.192s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_album_not_found_status_404
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.196s
+              </td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_album_not_found_empty_body
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.189s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_albums_by_user_id_status_200
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.183s
+              </td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_albums_by_user_id_all_belong_to_user
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.186s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_albums_invalid_user_id_returns_empty
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.184s
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="margin-bottom:24px;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
+          <span style="font-size:15px;font-weight:600;color:#34495e;">TestCreateAlbum</span>
+          <span style="font-size:12px;color:#27ae60;font-weight:500;">
+            4/4 passed
+          </span>
+        </div>
+        <table style="width:100%;border-collapse:collapse;font-size:13px;">
+          <thead>
+            <tr style="background:#f8f9fa;">
+              <th style="text-align:left;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;">Test Name</th>
+              <th style="text-align:center;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;width:90px;">Status</th>
+              <th style="text-align:right;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;width:80px;">Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_create_album_status_201
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.511s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_create_album_returns_id
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.305s
+              </td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_create_album_title_matches
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.525s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_create_album_empty_body
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.301s
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="margin-bottom:24px;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
+          <span style="font-size:15px;font-weight:600;color:#34495e;">TestUpdateAlbum</span>
+          <span style="font-size:12px;color:#27ae60;font-weight:500;">
+            3/3 passed
+          </span>
+        </div>
+        <table style="width:100%;border-collapse:collapse;font-size:13px;">
+          <thead>
+            <tr style="background:#f8f9fa;">
+              <th style="text-align:left;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;">Test Name</th>
+              <th style="text-align:center;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;width:90px;">Status</th>
+              <th style="text-align:right;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;width:80px;">Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_update_album_status_200
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.520s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_update_album_title_changed
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.293s
+              </td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_update_album_not_found_status_500
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.540s
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="margin-bottom:24px;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
+          <span style="font-size:15px;font-weight:600;color:#34495e;">TestPatchAlbum</span>
+          <span style="font-size:12px;color:#e74c3c;font-weight:500;">
+            2/3 passed
+          </span>
+        </div>
+        <table style="width:100%;border-collapse:collapse;font-size:13px;">
+          <thead>
+            <tr style="background:#f8f9fa;">
+              <th style="text-align:left;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;">Test Name</th>
+              <th style="text-align:center;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;width:90px;">Status</th>
+              <th style="text-align:right;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;width:80px;">Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_patch_album_title_status_200
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.484s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_patch_album_title_updated
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.300s
+              </td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_patch_album_not_found_status_500
+                <div style="font-size:11px;color:#999;margin-top:3px;">assert 200 == 500
+ +  where 200 = <Response [200]>.status_code</div>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#f8d7da;color:#721c24;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">FAILED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.306s
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="margin-bottom:24px;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
+          <span style="font-size:15px;font-weight:600;color:#34495e;">TestDeleteAlbum</span>
+          <span style="font-size:12px;color:#e74c3c;font-weight:500;">
+            2/3 passed
+          </span>
+        </div>
+        <table style="width:100%;border-collapse:collapse;font-size:13px;">
+          <thead>
+            <tr style="background:#f8f9fa;">
+              <th style="text-align:left;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;">Test Name</th>
+              <th style="text-align:center;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;width:90px;">Status</th>
+              <th style="text-align:right;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;width:80px;">Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_delete_album_status_200
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.312s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_delete_album_returns_empty_object
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.312s
+              </td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_delete_album_not_found_status_404
+                <div style="font-size:11px;color:#999;margin-top:3px;">assert 200 == 404
+ +  where 200 = <Response [200]>.status_code</div>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#f8d7da;color:#721c24;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">FAILED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.315s
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="margin-bottom:24px;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
+          <span style="font-size:15px;font-weight:600;color:#34495e;">TestGetComments</span>
+          <span style="font-size:12px;color:#27ae60;font-weight:500;">
+            13/13 passed
+          </span>
+        </div>
+        <table style="width:100%;border-collapse:collapse;font-size:13px;">
+          <thead>
+            <tr style="background:#f8f9fa;">
+              <th style="text-align:left;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;">Test Name</th>
+              <th style="text-align:center;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;width:90px;">Status</th>
+              <th style="text-align:right;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;width:80px;">Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_all_comments_status_200
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.207s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_all_comments_returns_list
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.214s
+              </td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_all_comments_returns_500
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.204s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_all_comments_fields_exist
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.215s
+              </td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_comment_by_id_status_200
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.197s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_comment_by_id_correct_id
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.187s
+              </td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_comment_by_id_email_format
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.186s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_comment_not_found_status_404
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.191s
+              </td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_comment_not_found_empty_body
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.190s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_comments_by_post_id_status_200
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.195s
+              </td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_comments_by_post_id_all_belong_to_post
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.191s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_comments_by_post_id_returns_5
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.199s
+              </td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_comments_invalid_post_id_returns_empty
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.190s
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="margin-bottom:24px;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
+          <span style="font-size:15px;font-weight:600;color:#34495e;">TestCreateComment</span>
+          <span style="font-size:12px;color:#27ae60;font-weight:500;">
+            4/4 passed
+          </span>
+        </div>
+        <table style="width:100%;border-collapse:collapse;font-size:13px;">
+          <thead>
+            <tr style="background:#f8f9fa;">
+              <th style="text-align:left;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;">Test Name</th>
+              <th style="text-align:center;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;width:90px;">Status</th>
+              <th style="text-align:right;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;width:80px;">Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_create_comment_status_201
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.306s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_create_comment_returns_id
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.305s
+              </td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_create_comment_email_matches
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.297s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_create_comment_empty_body
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.298s
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="margin-bottom:24px;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
+          <span style="font-size:15px;font-weight:600;color:#34495e;">TestUpdateComment</span>
+          <span style="font-size:12px;color:#27ae60;font-weight:500;">
+            3/3 passed
+          </span>
+        </div>
+        <table style="width:100%;border-collapse:collapse;font-size:13px;">
+          <thead>
+            <tr style="background:#f8f9fa;">
+              <th style="text-align:left;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;">Test Name</th>
+              <th style="text-align:center;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;width:90px;">Status</th>
+              <th style="text-align:right;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;width:80px;">Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_update_comment_status_200
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.570s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_update_comment_name_changed
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.317s
+              </td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_update_comment_not_found_status_500
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.552s
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="margin-bottom:24px;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
+          <span style="font-size:15px;font-weight:600;color:#34495e;">TestPatchComment</span>
+          <span style="font-size:12px;color:#e74c3c;font-weight:500;">
+            2/3 passed
+          </span>
+        </div>
+        <table style="width:100%;border-collapse:collapse;font-size:13px;">
+          <thead>
+            <tr style="background:#f8f9fa;">
+              <th style="text-align:left;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;">Test Name</th>
+              <th style="text-align:center;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;width:90px;">Status</th>
+              <th style="text-align:right;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;width:80px;">Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_patch_comment_body_status_200
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.301s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_patch_comment_body_updated
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.305s
+              </td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_patch_comment_not_found_status_500
+                <div style="font-size:11px;color:#999;margin-top:3px;">assert 200 == 500
+ +  where 200 = <Response [200]>.status_code</div>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#f8d7da;color:#721c24;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">FAILED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.305s
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="margin-bottom:24px;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
+          <span style="font-size:15px;font-weight:600;color:#34495e;">TestDeleteComment</span>
+          <span style="font-size:12px;color:#e74c3c;font-weight:500;">
+            2/3 passed
+          </span>
+        </div>
+        <table style="width:100%;border-collapse:collapse;font-size:13px;">
+          <thead>
+            <tr style="background:#f8f9fa;">
+              <th style="text-align:left;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;">Test Name</th>
+              <th style="text-align:center;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;width:90px;">Status</th>
+              <th style="text-align:right;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;width:80px;">Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_delete_comment_status_200
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.298s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_delete_comment_returns_empty_object
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.291s
+              </td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_delete_comment_not_found_status_404
+                <div style="font-size:11px;color:#999;margin-top:3px;">assert 200 == 404
+ +  where 200 = <Response [200]>.status_code</div>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#f8d7da;color:#721c24;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">FAILED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.295s
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="margin-bottom:24px;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
+          <span style="font-size:15px;font-weight:600;color:#34495e;">TestGetPhotos</span>
+          <span style="font-size:12px;color:#27ae60;font-weight:500;">
+            14/14 passed
+          </span>
+        </div>
+        <table style="width:100%;border-collapse:collapse;font-size:13px;">
+          <thead>
+            <tr style="background:#f8f9fa;">
+              <th style="text-align:left;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;">Test Name</th>
+              <th style="text-align:center;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;width:90px;">Status</th>
+              <th style="text-align:right;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;width:80px;">Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_all_photos_status_200
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.303s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_all_photos_returns_list
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.304s
+              </td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_all_photos_returns_5000
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.264s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_all_photos_fields_exist
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.305s
+              </td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_photo_by_id_status_200
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.185s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_photo_by_id_correct_id
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.182s
+              </td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_photo_by_id_url_is_string
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.188s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_photo_by_id_thumbnail_is_string
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.188s
+              </td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_photo_not_found_status_404
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.197s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_photo_not_found_empty_body
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.198s
+              </td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_photos_by_album_id_status_200
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.194s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_photos_by_album_id_all_belong_to_album
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.195s
+              </td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_photos_by_album_id_returns_50
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.207s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_photos_invalid_album_id_returns_empty
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.200s
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="margin-bottom:24px;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
+          <span style="font-size:15px;font-weight:600;color:#34495e;">TestCreatePhoto</span>
+          <span style="font-size:12px;color:#27ae60;font-weight:500;">
+            3/3 passed
+          </span>
+        </div>
+        <table style="width:100%;border-collapse:collapse;font-size:13px;">
+          <thead>
+            <tr style="background:#f8f9fa;">
+              <th style="text-align:left;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;">Test Name</th>
+              <th style="text-align:center;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;width:90px;">Status</th>
+              <th style="text-align:right;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;width:80px;">Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_create_photo_status_201
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.312s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_create_photo_returns_id
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.307s
+              </td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_create_photo_title_matches
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.297s
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="margin-bottom:24px;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
+          <span style="font-size:15px;font-weight:600;color:#34495e;">TestUpdatePhoto</span>
+          <span style="font-size:12px;color:#27ae60;font-weight:500;">
+            3/3 passed
+          </span>
+        </div>
+        <table style="width:100%;border-collapse:collapse;font-size:13px;">
+          <thead>
+            <tr style="background:#f8f9fa;">
+              <th style="text-align:left;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;">Test Name</th>
+              <th style="text-align:center;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;width:90px;">Status</th>
+              <th style="text-align:right;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;width:80px;">Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_update_photo_status_200
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.508s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_update_photo_title_changed
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.294s
+              </td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_update_photo_not_found_status_500
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.486s
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="margin-bottom:24px;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
+          <span style="font-size:15px;font-weight:600;color:#34495e;">TestPatchPhoto</span>
+          <span style="font-size:12px;color:#e74c3c;font-weight:500;">
+            2/3 passed
+          </span>
+        </div>
+        <table style="width:100%;border-collapse:collapse;font-size:13px;">
+          <thead>
+            <tr style="background:#f8f9fa;">
+              <th style="text-align:left;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;">Test Name</th>
+              <th style="text-align:center;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;width:90px;">Status</th>
+              <th style="text-align:right;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;width:80px;">Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_patch_photo_title_status_200
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.303s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_patch_photo_title_updated
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.304s
+              </td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_patch_photo_not_found_status_500
+                <div style="font-size:11px;color:#999;margin-top:3px;">assert 200 == 500
+ +  where 200 = <Response [200]>.status_code</div>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#f8d7da;color:#721c24;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">FAILED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.299s
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="margin-bottom:24px;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
+          <span style="font-size:15px;font-weight:600;color:#34495e;">TestDeletePhoto</span>
+          <span style="font-size:12px;color:#e74c3c;font-weight:500;">
+            2/3 passed
+          </span>
+        </div>
+        <table style="width:100%;border-collapse:collapse;font-size:13px;">
+          <thead>
+            <tr style="background:#f8f9fa;">
+              <th style="text-align:left;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;">Test Name</th>
+              <th style="text-align:center;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;width:90px;">Status</th>
+              <th style="text-align:right;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;width:80px;">Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_delete_photo_status_200
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.296s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_delete_photo_returns_empty_object
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.305s
+              </td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_delete_photo_not_found_status_404
+                <div style="font-size:11px;color:#999;margin-top:3px;">assert 200 == 404
+ +  where 200 = <Response [200]>.status_code</div>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#f8d7da;color:#721c24;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">FAILED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.289s
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="margin-bottom:24px;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
+          <span style="font-size:15px;font-weight:600;color:#34495e;">TestGetPosts</span>
+          <span style="font-size:12px;color:#27ae60;font-weight:500;">
+            13/13 passed
+          </span>
+        </div>
+        <table style="width:100%;border-collapse:collapse;font-size:13px;">
+          <thead>
+            <tr style="background:#f8f9fa;">
+              <th style="text-align:left;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;">Test Name</th>
+              <th style="text-align:center;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;width:90px;">Status</th>
+              <th style="text-align:right;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;width:80px;">Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_all_posts_status_200
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.190s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_all_posts_returns_list
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.188s
+              </td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_all_posts_returns_100_posts
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.200s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_all_posts_fields_exist
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.184s
+              </td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_post_by_id_status_200
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.191s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_post_by_id_correct_id
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.185s
+              </td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_post_by_id_title_is_string
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.181s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_post_not_found_status_404
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.190s
+              </td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_post_not_found_empty_body
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.194s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_posts_by_user_id_status_200
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.189s
+              </td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_posts_by_user_id_all_belong_to_user
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.188s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_posts_by_user_id_returns_10
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.193s
+              </td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_posts_invalid_user_id_returns_empty
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.193s
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="margin-bottom:24px;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
+          <span style="font-size:15px;font-weight:600;color:#34495e;">TestCreatePost</span>
+          <span style="font-size:12px;color:#e74c3c;font-weight:500;">
+            7/8 passed
+          </span>
+        </div>
+        <table style="width:100%;border-collapse:collapse;font-size:13px;">
+          <thead>
+            <tr style="background:#f8f9fa;">
+              <th style="text-align:left;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;">Test Name</th>
+              <th style="text-align:center;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;width:90px;">Status</th>
+              <th style="text-align:right;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;width:80px;">Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_create_post_status_201
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.297s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_create_post_returns_id
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.299s
+              </td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_create_post_title_matches
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.297s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_create_post_userId_matches
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.302s
+              </td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_create_post_without_id_server_assigns
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.300s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_create_post_with_duplicate_id
+                <div style="font-size:11px;color:#999;margin-top:3px;">assert 101 == 1</div>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#f8d7da;color:#721c24;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">FAILED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.297s
+              </td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_create_post_with_empty_body
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.291s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_create_post_missing_title
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.299s
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="margin-bottom:24px;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
+          <span style="font-size:15px;font-weight:600;color:#34495e;">TestUpdatePost</span>
+          <span style="font-size:12px;color:#27ae60;font-weight:500;">
+            7/7 passed
+          </span>
+        </div>
+        <table style="width:100%;border-collapse:collapse;font-size:13px;">
+          <thead>
+            <tr style="background:#f8f9fa;">
+              <th style="text-align:left;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;">Test Name</th>
+              <th style="text-align:center;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;width:90px;">Status</th>
+              <th style="text-align:right;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;width:80px;">Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_update_post_status_200
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.548s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_update_post_title_changed
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.317s
+              </td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_update_post_id_unchanged
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.314s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_update_post_not_found_status_500
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.566s
+              </td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_update_post_empty_body_status_200
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.312s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_update_post_title_only
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.315s
+              </td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_update_post_invalid_data_types
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.310s
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="margin-bottom:24px;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
+          <span style="font-size:15px;font-weight:600;color:#34495e;">TestPatchPost</span>
+          <span style="font-size:12px;color:#e74c3c;font-weight:500;">
+            3/4 passed
+          </span>
+        </div>
+        <table style="width:100%;border-collapse:collapse;font-size:13px;">
+          <thead>
+            <tr style="background:#f8f9fa;">
+              <th style="text-align:left;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;">Test Name</th>
+              <th style="text-align:center;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;width:90px;">Status</th>
+              <th style="text-align:right;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;width:80px;">Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_patch_post_title_status_200
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.301s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_patch_post_title_updated
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.310s
+              </td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_patch_post_other_fields_still_exist
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.303s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_patch_post_not_found_status_500
+                <div style="font-size:11px;color:#999;margin-top:3px;">assert 200 == 500
+ +  where 200 = <Response [200]>.status_code</div>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#f8d7da;color:#721c24;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">FAILED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.306s
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="margin-bottom:24px;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
+          <span style="font-size:15px;font-weight:600;color:#34495e;">TestDeletePost</span>
+          <span style="font-size:12px;color:#e74c3c;font-weight:500;">
+            2/3 passed
+          </span>
+        </div>
+        <table style="width:100%;border-collapse:collapse;font-size:13px;">
+          <thead>
+            <tr style="background:#f8f9fa;">
+              <th style="text-align:left;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;">Test Name</th>
+              <th style="text-align:center;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;width:90px;">Status</th>
+              <th style="text-align:right;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;width:80px;">Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_delete_post_status_200
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.299s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_delete_post_returns_empty_object
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.298s
+              </td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_delete_post_not_found_status_404
+                <div style="font-size:11px;color:#999;margin-top:3px;">assert 200 == 404
+ +  where 200 = <Response [200]>.status_code</div>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#f8d7da;color:#721c24;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">FAILED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.296s
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="margin-bottom:24px;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
+          <span style="font-size:15px;font-weight:600;color:#34495e;">TestGetTodos</span>
+          <span style="font-size:12px;color:#27ae60;font-weight:500;">
+            13/13 passed
+          </span>
+        </div>
+        <table style="width:100%;border-collapse:collapse;font-size:13px;">
+          <thead>
+            <tr style="background:#f8f9fa;">
+              <th style="text-align:left;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;">Test Name</th>
+              <th style="text-align:center;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;width:90px;">Status</th>
+              <th style="text-align:right;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;width:80px;">Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_all_todos_status_200
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.198s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_all_todos_returns_list
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.204s
+              </td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_all_todos_returns_200
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.196s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_all_todos_fields_exist
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.203s
+              </td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_todo_by_id_status_200
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.193s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_todo_by_id_correct_id
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.187s
+              </td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_todo_by_id_completed_is_bool
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.192s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_todo_not_found_status_404
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.196s
+              </td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_todo_not_found_empty_body
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.194s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_todos_by_user_id_status_200
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.191s
+              </td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_todos_by_user_id_all_belong_to_user
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.186s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_completed_todos_all_true
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.194s
+              </td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_incomplete_todos_all_false
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.188s
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="margin-bottom:24px;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
+          <span style="font-size:15px;font-weight:600;color:#34495e;">TestCreateTodo</span>
+          <span style="font-size:12px;color:#27ae60;font-weight:500;">
+            4/4 passed
+          </span>
+        </div>
+        <table style="width:100%;border-collapse:collapse;font-size:13px;">
+          <thead>
+            <tr style="background:#f8f9fa;">
+              <th style="text-align:left;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;">Test Name</th>
+              <th style="text-align:center;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;width:90px;">Status</th>
+              <th style="text-align:right;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;width:80px;">Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_create_todo_status_201
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.296s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_create_todo_returns_id
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.289s
+              </td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_create_todo_completed_is_false
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.301s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_create_todo_empty_body
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.303s
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="margin-bottom:24px;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
+          <span style="font-size:15px;font-weight:600;color:#34495e;">TestUpdateTodo</span>
+          <span style="font-size:12px;color:#27ae60;font-weight:500;">
+            4/4 passed
+          </span>
+        </div>
+        <table style="width:100%;border-collapse:collapse;font-size:13px;">
+          <thead>
+            <tr style="background:#f8f9fa;">
+              <th style="text-align:left;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;">Test Name</th>
+              <th style="text-align:center;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;width:90px;">Status</th>
+              <th style="text-align:right;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;width:80px;">Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_update_todo_status_200
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.559s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_update_todo_title_changed
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.310s
+              </td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_update_todo_completed_is_true
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.312s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_update_todo_not_found_status_500
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.478s
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="margin-bottom:24px;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
+          <span style="font-size:15px;font-weight:600;color:#34495e;">TestPatchTodo</span>
+          <span style="font-size:12px;color:#e74c3c;font-weight:500;">
+            2/3 passed
+          </span>
+        </div>
+        <table style="width:100%;border-collapse:collapse;font-size:13px;">
+          <thead>
+            <tr style="background:#f8f9fa;">
+              <th style="text-align:left;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;">Test Name</th>
+              <th style="text-align:center;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;width:90px;">Status</th>
+              <th style="text-align:right;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;width:80px;">Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_patch_todo_completed_status_200
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.307s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_patch_todo_completed_updated
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.306s
+              </td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_patch_todo_not_found_status_500
+                <div style="font-size:11px;color:#999;margin-top:3px;">assert 200 == 500
+ +  where 200 = <Response [200]>.status_code</div>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#f8d7da;color:#721c24;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">FAILED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.305s
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="margin-bottom:24px;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
+          <span style="font-size:15px;font-weight:600;color:#34495e;">TestDeleteTodo</span>
+          <span style="font-size:12px;color:#e74c3c;font-weight:500;">
+            2/3 passed
+          </span>
+        </div>
+        <table style="width:100%;border-collapse:collapse;font-size:13px;">
+          <thead>
+            <tr style="background:#f8f9fa;">
+              <th style="text-align:left;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;">Test Name</th>
+              <th style="text-align:center;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;width:90px;">Status</th>
+              <th style="text-align:right;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;width:80px;">Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_delete_todo_status_200
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.300s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_delete_todo_returns_empty_object
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.309s
+              </td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_delete_todo_not_found_status_404
+                <div style="font-size:11px;color:#999;margin-top:3px;">assert 200 == 404
+ +  where 200 = <Response [200]>.status_code</div>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#f8d7da;color:#721c24;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">FAILED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.291s
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="margin-bottom:24px;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
+          <span style="font-size:15px;font-weight:600;color:#34495e;">TestGetUsers</span>
+          <span style="font-size:12px;color:#27ae60;font-weight:500;">
+            14/14 passed
+          </span>
+        </div>
+        <table style="width:100%;border-collapse:collapse;font-size:13px;">
+          <thead>
+            <tr style="background:#f8f9fa;">
+              <th style="text-align:left;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;">Test Name</th>
+              <th style="text-align:center;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;width:90px;">Status</th>
+              <th style="text-align:right;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;width:80px;">Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_all_users_status_200
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.185s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_all_users_returns_list
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.188s
+              </td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_all_users_returns_10
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.189s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_all_users_fields_exist
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.192s
+              </td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_user_by_id_status_200
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.186s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_user_by_id_correct_id
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.194s
+              </td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_user_by_id_email_has_at
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.191s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_user_by_id_address_has_city
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.188s
+              </td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_user_not_found_status_404
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.188s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_user_not_found_empty_body
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.188s
+              </td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_user_by_username_status_200
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.193s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_user_by_username_correct_user
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.189s
+              </td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_user_by_username_returns_one
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.192s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_get_user_invalid_username_returns_empty
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.198s
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="margin-bottom:24px;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
+          <span style="font-size:15px;font-weight:600;color:#34495e;">TestCreateUser</span>
+          <span style="font-size:12px;color:#27ae60;font-weight:500;">
+            4/4 passed
+          </span>
+        </div>
+        <table style="width:100%;border-collapse:collapse;font-size:13px;">
+          <thead>
+            <tr style="background:#f8f9fa;">
+              <th style="text-align:left;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;">Test Name</th>
+              <th style="text-align:center;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;width:90px;">Status</th>
+              <th style="text-align:right;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;width:80px;">Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_create_user_status_201
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.294s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_create_user_returns_id
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.304s
+              </td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_create_user_name_matches
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.303s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_create_user_empty_body
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.295s
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="margin-bottom:24px;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
+          <span style="font-size:15px;font-weight:600;color:#34495e;">TestUpdateUser</span>
+          <span style="font-size:12px;color:#27ae60;font-weight:500;">
+            3/3 passed
+          </span>
+        </div>
+        <table style="width:100%;border-collapse:collapse;font-size:13px;">
+          <thead>
+            <tr style="background:#f8f9fa;">
+              <th style="text-align:left;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;">Test Name</th>
+              <th style="text-align:center;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;width:90px;">Status</th>
+              <th style="text-align:right;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;width:80px;">Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_update_user_status_200
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.526s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_update_user_name_changed
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.298s
+              </td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_update_user_not_found_status_500
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.494s
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="margin-bottom:24px;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
+          <span style="font-size:15px;font-weight:600;color:#34495e;">TestPatchUser</span>
+          <span style="font-size:12px;color:#e74c3c;font-weight:500;">
+            3/4 passed
+          </span>
+        </div>
+        <table style="width:100%;border-collapse:collapse;font-size:13px;">
+          <thead>
+            <tr style="background:#f8f9fa;">
+              <th style="text-align:left;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;">Test Name</th>
+              <th style="text-align:center;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;width:90px;">Status</th>
+              <th style="text-align:right;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;width:80px;">Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_patch_user_email_status_200
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.307s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_patch_user_email_updated
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.297s
+              </td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_patch_user_other_fields_still_exist
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.294s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_patch_user_not_found_status_500
+                <div style="font-size:11px;color:#999;margin-top:3px;">assert 200 == 500
+ +  where 200 = <Response [200]>.status_code</div>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#f8d7da;color:#721c24;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">FAILED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.291s
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="margin-bottom:24px;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
+          <span style="font-size:15px;font-weight:600;color:#34495e;">TestDeleteUser</span>
+          <span style="font-size:12px;color:#e74c3c;font-weight:500;">
+            2/3 passed
+          </span>
+        </div>
+        <table style="width:100%;border-collapse:collapse;font-size:13px;">
+          <thead>
+            <tr style="background:#f8f9fa;">
+              <th style="text-align:left;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;">Test Name</th>
+              <th style="text-align:center;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;width:90px;">Status</th>
+              <th style="text-align:right;padding:8px 12px;color:#555;font-weight:600;border-bottom:1px solid #dee2e6;width:80px;">Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_delete_user_status_200
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.299s
+              </td>
+            </tr>
+            <tr style="background:#fafafa;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_delete_user_returns_empty_object
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#d4edda;color:#155724;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">PASSED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.312s
+              </td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;color:#333;">
+                test_delete_user_not_found_status_404
+                <div style="font-size:11px;color:#999;margin-top:3px;">assert 200 == 404
+ +  where 200 = <Response [200]>.status_code</div>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:center;">
+                <span style="background:#f8d7da;color:#721c24;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:600;">FAILED</span>
+              </td>
+              <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;text-align:right;color:#888;">
+                0.301s
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div></div>
+    </div>
+
+    <div class="footer">
+      JSONPlaceholder API Test Suite &nbsp;|&nbsp; 2026-05-17 01:52:55
+    </div>
+
+  </div>
+</body>
+</html>
